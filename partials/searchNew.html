@@ -1,0 +1,44 @@
+<h2>Search for a phrase</h2>
+  <form>
+    <div class="form-group">
+      <label>What Subject? (*required)</label>
+        <select id="subject">
+          <option value="Attitude">Attitude</option>
+          <option value="Appearance">Appearance</option>
+        </select>
+      <label>What Subject? (not required)</label>
+        <select id="measure">
+          <option value="exceeds">Exceed Expectations</option>
+          <option value="average">Average</option>
+          <option value="improvement">Improvement Needed</option>
+        </select>
+
+      <!-- the below might make it prettier but for now I just want it to work -->
+      <!-- <div class="input-group-btn  board-list">
+        <button class="btn btn-success dropdown-toggle" data-toggle="dropdown" style="margin-top: 10px;">Choose Your Subject</button>
+        <ul class="subject dropdown-menu dropdown-menu-right">
+          <li value="attitude">Attitude</li>
+          <li value="appearance">Appearance</li>
+        </ul>
+      </div> -->
+
+
+    <button class="btn btn-default" ng-click="searchExisting(subject)">Search</button>
+  </form>
+  <br>
+  <br>
+  <br>
+  <div class="row">
+    <div class ="panel panel-success col-md-3 col-md-offset-1 .containerfluid" ng-repeat="phrase in searchedPhrases | filter: {keyWords: searchText.search}">
+      <div class="row">
+        <div class="panel-body">
+          <div>Subject:  {{phrase.subject}}</div>
+          <div>Measurement:  {{phrase.measure}}</div>
+          <p>Suggested Phrase:  <span>"{{phrase.phrase}}"</span></p>
+          <button ng-click="removePhraseFromList($index)">X</button>
+          <button>Save this phrase</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
