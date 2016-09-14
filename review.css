@@ -2,3 +2,17 @@ h1, h2 {
   text-align: center;
   color: blue;
 }
+
+.navbar {
+  background-color: skyblue;
+}
+
+h3 {
+  text-align: center;
+  font-weight: 600;
+}
+
+.landQuote1, .landQuote2 {
+  font-weight: 700;
+  font-style: italic;
+}

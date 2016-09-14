@@ -1,8 +1,8 @@
-"strict use";
+"use strict";
 
-console.log("review.js is on deck");
+// console.log("review.js is on deck");
 //first create the angular module variable
-var app = angular.module("ReviewPhraseApp", [ngRoute]);
+var app = angular.module("ReviewPhraseApp", ["ngRoute"]);
 
 app.config(function($routeProvider) {
   console.log("we are inside app.config");
@@ -10,5 +10,9 @@ app.config(function($routeProvider) {
     when("/landing", {
       templateUrl: "partials/Landing.html",
       controller: "LandingPageCtrl"
-    });
+    }).
+    when("/", {
+      templateUrl: "partials/Landing.html",
+      controller: "LandingPageCtrl"
+    })
 });

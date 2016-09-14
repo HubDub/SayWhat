@@ -2,13 +2,32 @@
 <html>
 <head>
   <title>Say What?</title>
+  <link rel="stylesheet" type="text/css" href="lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="review.css">
 </head>
-<body>
-  <h1>Say What?</h1>
-  <h2>(professionally speaking)</h2>
+<body ng-app="ReviewPhraseApp">
+  <div ng-include="'partials/navbar.html'"></div>
+  <div class="row">
+      <div class="col-xs-10 col-xs-offset-1 main-container">
+        <div class="col-xs-12" ng-view></div>
+      </div>
+    </div>
+  </div>
 
+
+
+<!-- libraries -->
+  <script type="text/javascript" src="lib/bower_components/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="lib/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="lib/bower_components/angular/angular.min.js"></script>
+  <script type="text/javascript" src="lib/bower_components/angular-route/angular-route.min.js"></script>
+  <script type="text/javascript" src="lib/bower_components/firebase/firebase.js"></script>
   <!-- local app js -->
   <script type="text/javascript" src="app/review.js"></script>
+  <!-- providers -->
+  <!-- controllers -->
+  <script type="text/javascript" src="app/controllers/NavBarCtrl.js"></script>
+  <script type="text/javascript" src="app/controllers/LandingPageCtrl.js"></script>
+
 </body>
 </html>

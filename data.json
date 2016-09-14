@@ -1,0 +1,38 @@
+[
+  {
+    "subject" : "attitude",
+    "measure" : "exceeds expectations",
+    "phrase" : "always looks for ways to help others",
+    "employee" : []
+  },
+  {
+    "subject" : "attitude",
+    "measure" : "average",
+    "phrase" : "helps others when asked",
+    "employee" : []
+  },
+  {
+    "subject" : "attitude",
+    "measure" : "improvement needed",
+    "phrase" : "avoids assisting coworkers",
+    "employee" : []
+  },
+  {
+    "subject" : "appearance",
+    "measure" : "exceeds expectations",
+    "phrase" : "always appears professional",
+    "employee" : []
+  },
+  {
+    "subject" : "appearance",
+    "measure" : "average",
+    "phrase" : "appropriate dress for position",
+    "employee" : []
+  },
+  {
+    "subject" : "appearance",
+    "measure" : "improvement needed",
+    "phrase" : "often appears disheveled",
+    "employee" : []
+  },
+]
