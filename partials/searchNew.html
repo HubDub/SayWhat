@@ -3,14 +3,15 @@
     <div class="form-group">
       <label>What Subject? (*required)</label>
         <select id="subject">
-          <option value="Attitude">Attitude</option>
-          <option value="Appearance">Appearance</option>
+          <option value="attitude">Attitude</option>
+          <option value="appearance">Appearance</option>
         </select>
       <label>What Subject? (not required)</label>
         <select id="measure">
-          <option value="exceeds">Exceed Expectations</option>
+          <option value="all">All</option>
+          <option value="exceeds expectations">Exceed Expectations</option>
           <option value="average">Average</option>
-          <option value="improvement">Improvement Needed</option>
+          <option value="improvement needed">Improvement Needed</option>
         </select>
 
       <!-- the below might make it prettier but for now I just want it to work -->
@@ -23,7 +24,7 @@
       </div> -->
 
 
-    <button class="btn btn-default" ng-click="searchExisting(subject)">Search</button>
+    <button class="btn btn-default" ng-click="searchExisting()">Search</button>
   </form>
   <br>
   <br>
