@@ -15,18 +15,18 @@ app.controller("SearchNewCtrl", function($scope, PhraseFactory, $location) {
         for (var phrase in phraseObjects) {
           phraseObjects[phrase].phraseid = phrase;
           if (measureVal === "all") {
-          searchedPhrases.push(phraseObjects[phrase])
+          searchedPhrases.push(phraseObjects[phrase]);
           } else if (phraseObjects[phrase].measure === measureVal) {
-            searchedPhrases.push(phraseObjects[phrase])
+            searchedPhrases.push(phraseObjects[phrase]);
           }
         }
       $scope.searchedPhrases = searchedPhrases;
       });
-  }
+  };
 
   $scope.removePhraseFromList = function(index) {
     // console.log("removePhraseFromList: ", index);
     $scope.searchedPhrases.splice(index, 1);
     // console.log(searchedPhrases);
-  }
+  };
 });
