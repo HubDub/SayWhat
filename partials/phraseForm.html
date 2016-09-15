@@ -1,0 +1,20 @@
+<h1>{{title}}</h1>
+  <form>
+    <div class="form-group">
+      <label>Phrase Subject</label>
+      <input type="text" class="form-control" placeholder="Ex: Subject" ng-model="thePhrase.subject" />
+    </div>
+    <div class="form-group">
+      <label>Measurement Level</label>
+      <input type="text" class="form-control" placeholder="Ex: needs improvement" ng-model="thePhrase.measure"/>
+    </div>
+    <div class="form-group">
+      <label>Phrase</label>
+      <input type="text" class="form-control" placeholder="Ex: You never gossip, except sometimes" ng-model="thePhrase.phrase"/>
+    </div>
+    <div class="form-group">
+      <label>Employee Tagged</label>
+      <input type="text" class="form-control" placeholder="Ex: Joe" ng-model="thePhrase.employee"/>
+    </div>
+    <button class="btn btn-default" ng-click="saveOnePhrase()">{{btnText}}</button>
+  </form>

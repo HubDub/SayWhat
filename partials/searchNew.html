@@ -37,7 +37,10 @@
           <div>Measurement:  {{phrase.measure}}</div>
           <p>Suggested Phrase:  <span>"{{phrase.phrase}}"</span></p>
           <button ng-click="removePhraseFromList($index)">X</button>
-          <button>Save this phrase</button>
+
+          <!-- <button ng-click="getPhraseId(phrase.phraseid)">Save This Phrase</button> -->
+
+          <button><a ng-href="#phrase/{{phrase.phraseid}}/save">Save this phrase</button>
         </div>
 
       </div>
