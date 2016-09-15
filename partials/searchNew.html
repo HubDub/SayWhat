@@ -2,12 +2,12 @@
   <form>
     <div class="form-group">
       <label>What Subject? (*required)</label>
-        <select id="subject">
+        <select id="subject" ng-model="subject">
           <option value="attitude">Attitude</option>
           <option value="appearance">Appearance</option>
         </select>
       <label>What Subject? (not required)</label>
-        <select id="measure">
+        <select id="measure" ng-model="measure">
           <option value="all">All</option>
           <option value="exceeds expectations">Exceed Expectations</option>
           <option value="average">Average</option>

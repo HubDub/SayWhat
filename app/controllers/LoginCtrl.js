@@ -1,6 +1,7 @@
 "use strict";
 
 app.controller("LoginCtrl", function($scope, $window, AuthFactory ) {
+  // focus("#loginInputField");
   $scope.account = {
     email: "",
     password: ""
