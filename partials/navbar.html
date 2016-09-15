@@ -12,15 +12,19 @@
       <li>
         <a href="/#/search">Search for Phrases</a>
       </li>
-      <li>
+      <li ng-show="$parent.isLoggedIn">
         <a href="/#/myphrases">Your Saved Phrases</a>
       </li>
-      <li>
+      <li ng-show="$parent.isLoggedIn">
         <a href="/#/form">Create a New Phrase</a>
       </li>
-      <li>
+      <li ng-show="!$parent.isLoggedIn">
         <a href="/#/login">Sign In</a>
       </li>
+      <li ng-show="$parent.isLoggedIn">
+        <a ng-click="logout()">Sign Out</a>
+      </li>
+
     </ul>
   </div>
 </div>
