@@ -18,7 +18,7 @@ app.controller("CreatePhraseCtrl", function($scope, $location, PhraseFactory) {
     PhraseFactory.postNewUserPhrase($scope.thePhrase)
       .then ( (result) => {
         console.log("after postNewUserPhrase");
-        $location.url("#/savedPhrases");
+        $location.url("/savedPhrases");
       });
   };
 });

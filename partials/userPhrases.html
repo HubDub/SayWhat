@@ -1,14 +1,23 @@
 <h1>Your Saved Phrases</h1>
+  <div>
+    <input type="text" class="form-control" placeholder="Search for any subject, measure, phrase or employee..." ng-model="searchText.search">
+  </div>
+  <br>
   <div class="row">
-    <div class ="panel panel-success col-md-3 col-md-offset-1 .containerfluid" ng-repeat="phrase in userSavedPhrases | filter: {keyWords: searchText.search}">
+    <div class ="user-phrases panel panel-success col-md-10 col-md-offset-1 .containerfluid" ng-repeat="phrase in userSavedPhrases | filter: searchText.search">
       <div class="row">
         <div class="panel-body">
-          <div>Subject:  {{phrase.subject}}</div>
-          <div>Measurement:  {{phrase.measure}}</div>
-          <div>Suggested Phrase:  <span>"{{phrase.phrase}}"</span></div>
-          <div>Employee tagged:  <span>"{{phrase.employee}}"</span></div>
-          <button ng-click="removeUserPhraseFb(phrase.phraseid)">Delete from Your Phrases</button>
-          <button><a ng-href="#phrase/{{phrase.phraseid}}/edit">Edit this phrase</button>
+          <div class="col-md-9">
+            <div>Subject:  {{phrase.subject}}</div>
+            <div>Measurement:  {{phrase.measure}}</div>
+            <div>Suggested Phrase:  <span>"{{phrase.phrase}}"</span></div>
+            <div>Employee tagged:  <span>"{{phrase.employee}}"</span></div>
+          </div>
+          <div class="col-md-3">
+            <button ng-click="removeUserPhraseFb(phrase.phraseid)">Delete Phrase</button>
+            <br>
+            <button><a ng-href="#phrase/{{phrase.phraseid}}/edit">Edit phrase</a></button>
+          </div>
         </div>
       </div>
     </div>

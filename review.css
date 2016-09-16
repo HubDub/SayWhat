@@ -17,12 +17,17 @@ h3 {
   font-style: italic;
 }
 
-.panel {
+.user-phrases {
+  min-height: 80px;
+  background-color: lightblue;
+}
+
+.search-phrases {
   min-height: 200px;
   background-color: lightsalmon;
 }
 
-.panel p span {
+.search-phrases p span {
   font-style: italic;
   font-weight: 800;
 }
