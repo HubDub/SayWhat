@@ -1,6 +1,10 @@
 <h1>Your Saved Phrases</h1>
+  <div>
+    <input type="text" class="form-control" placeholder="Search for any subject, measure, phrase or employee..." ng-model="searchText.search">
+  </div>
+  <br>
   <div class="row">
-    <div class ="panel panel-success col-md-3 col-md-offset-1 .containerfluid" ng-repeat="phrase in userSavedPhrases | filter: {keyWords: searchText.search}">
+    <div class ="panel panel-success col-md-3 col-md-offset-1 .containerfluid" ng-repeat="phrase in userSavedPhrases | filter: searchText.search">
       <div class="row">
         <div class="panel-body">
           <div>Subject:  {{phrase.subject}}</div>

@@ -1,8 +1,8 @@
 "use strict";
 
-app.controller("UserPhrasesCtrl", function(PhraseFactory, $scope, $location) {
+app.controller("UserPhrasesCtrl", function(PhraseFactory, $scope, $location, SearchTermData) {
   console.log("you are in the UserPhrasesCtrl");
-
+  $scope.searchText = SearchTermData;
   //need to grab userId.
   let userId = $scope.$parent.getUser();
   // console.log("UserPhraseCtrl userId: ", userId);
@@ -27,7 +27,7 @@ app.controller("UserPhrasesCtrl", function(PhraseFactory, $scope, $location) {
     PhraseFactory.deleteUserPhrase(phraseId)
       .then( (response) => {
         console.log("removeUserPhraseFb after deleteUserPhrase - phrase should be deleted from FB");
-        $location.url("#/savedPhrases");
+        $location.url("/savedPhrases");
       });
   };
 });
