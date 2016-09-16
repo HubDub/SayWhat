@@ -7,7 +7,7 @@
           <div>Measurement:  {{phrase.measure}}</div>
           <div>Suggested Phrase:  <span>"{{phrase.phrase}}"</span></div>
           <div>Employee tagged:  <span>"{{phrase.employee}}"</span></div>
-          <button ng-click="removePhraseFromFb()">X</button>
+          <button ng-click="removeUserPhraseFb(phrase.phraseid)">X</button>
           <button><a ng-href="#phrase/{{phrase.phraseid}}/edit">Edit this phrase</button>
         </div>
       </div>

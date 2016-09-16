@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller("UserPhrasesCtrl", function(PhraseFactory, $scope) {
+app.controller("UserPhrasesCtrl", function(PhraseFactory, $scope, $location) {
   console.log("you are in the UserPhrasesCtrl");
 
   //need to grab userId.
@@ -21,4 +21,13 @@ app.controller("UserPhrasesCtrl", function(PhraseFactory, $scope) {
       console.log("after getUserSavedPhrases- userSavedPhrases array: ", userSavedPhrases);
       $scope.userSavedPhrases = userSavedPhrases;
     });
+
+  $scope.removeUserPhraseFb = function(phraseId) {
+    console.log("UserPhraseCtrl.removeUserPhraseFb-phraseId: ", phraseId);
+    PhraseFactory.deleteUserPhrase(phraseId)
+      .then( (response) => {
+        console.log("removeUserPhraseFb after deleteUserPhrase - phrase should be deleted from FB");
+        $location.url("#/savedPhrases");
+      });
+  };
 });
