@@ -80,5 +80,18 @@ app.factory("PhraseFactory", function ($q, $http, FirebaseUrl) {
     });
   };
 
-  return {getSearchPhrase, getOnePhrase, saveExistingPhrase, getUserSavedPhrases, patchExistingPhrase, deleteUserPhrase};
+  let postNewUserPhrase = function(phraseObject) {
+    return $q( (resolve, reject) => {
+      console.log("PhraseFactory.PostNewUserPhrase - object: ", phraseObject);
+      $http.post(`${FirebaseUrl}/phrases.json`, JSON.stringify(phraseObject))
+      .success( (response) => {
+        resolve(response);
+      })
+      .error( (error) => {
+        reject(error);
+      });
+    });
+  };
+
+  return {getSearchPhrase, getOnePhrase, saveExistingPhrase, getUserSavedPhrases, patchExistingPhrase, deleteUserPhrase, postNewUserPhrase};
 });
