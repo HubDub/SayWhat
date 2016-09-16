@@ -46,6 +46,10 @@ app.config(function($routeProvider) {
       templateUrl: "partials/phraseForm.html",
       controller: "EditPhraseCtrl"
     }).
+    when("/phrase/new", {
+      templateUrl: "partials/phraseForm.html",
+      controller: "CreatePhraseCtrl"
+    }).
     otherwise("/landing");
 });
 
