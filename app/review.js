@@ -38,6 +38,14 @@ app.config(function($routeProvider) {
       templateUrl: "partials/phraseForm.html",
       controller: "SavePhraseCtrl"
     }).
+    when("/savedPhrases", {
+      templateUrl: "partials/userPhrases.html",
+      controller: "UserPhrasesCtrl"
+    }).
+    when("/phrase/:phraseId/edit", {
+      templateUrl: "partials/phraseForm.html",
+      controller: "EditPhraseCtrl"
+    }).
     otherwise("/landing");
 });
 
