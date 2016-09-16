@@ -9,8 +9,8 @@ app.controller("SearchNewCtrl", function($scope, PhraseFactory, $location) {
     // console.log("SearchNewCtrl.searchExisting subjectVal: ", subjectVal);
     // console.log("SearchNewCtrl.searchExisting measureval: ", measureVal);
 
-    if (subjectVal === "undefined") {
-        // alert("you must choose a subject")
+    if (subjectVal === undefined) {
+        alert("you must choose a subject");
         //this doesn't work. need to add some type of stop that will force them to choose a subject, unless we want them to pull the whole database?
     } else
     PhraseFactory.getSearchPhrase(subjectVal)
