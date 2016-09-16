@@ -9,9 +9,9 @@
       <label>What Subject? (not required)</label>
         <select id="measure" ng-model="measure">
           <option value="all">All</option>
-          <option value="exceeds expectations">Exceed Expectations</option>
+          <option value="excellent">Excellent</option>
           <option value="average">Average</option>
-          <option value="improvement needed">Improvement Needed</option>
+          <option value="poor">Poor</option>
         </select>
 
       <!-- the below might make it prettier but for now I just want it to work -->
@@ -30,9 +30,9 @@
   <br>
   <br>
   <div class="row">
-    <div class ="panel panel-success col-md-3 col-md-offset-1 .containerfluid" ng-repeat="phrase in searchedPhrases | filter: {keyWords: searchText.search}">
+    <div class ="search-phrases panel panel-success col-md-3 col-md-offset-1 .containerfluid" ng-repeat="phrase in searchedPhrases | filter: {keyWords: searchText.search}">
       <div class="row">
-        <div class="panel-body">
+        <div class="panel-body ">
           <div>Subject:  {{phrase.subject}}</div>
           <div>Measurement:  {{phrase.measure}}</div>
           <p>Suggested Phrase:  <span>"{{phrase.phrase}}"</span></p>
