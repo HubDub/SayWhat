@@ -61,13 +61,24 @@ app.factory("PhraseFactory", function ($q, $http, FirebaseUrl) {
       $http.patch(`${FirebaseUrl}/phrases/${phraseId}.json`, JSON.stringify(phraseObject))
       .success( (FbSavedObjects) => {
         resolve(FbSavedObjects);
-    })
+      })
       .error( (error) => {
         reject(error);
       });
     });
   };
 
+  let deleteUserPhrase = function(phraseId) {
+    return $q( (resolve, reject) => {
+      $http.delete(`${FirebaseUrl}/phrases/${phraseId}.json`)
+      .success( (response) => {
+        resolve(response);
+      })
+      .error( (error) => {
+        reject(error);
+      });
+    });
+  };
 
-  return {getSearchPhrase, getOnePhrase, saveExistingPhrase, getUserSavedPhrases, patchExistingPhrase};
+  return {getSearchPhrase, getOnePhrase, saveExistingPhrase, getUserSavedPhrases, patchExistingPhrase, deleteUserPhrase};
 });
