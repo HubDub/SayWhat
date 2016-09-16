@@ -1,0 +1,15 @@
+<h1>Your Saved Phrases</h1>
+  <div class="row">
+    <div class ="panel panel-success col-md-3 col-md-offset-1 .containerfluid" ng-repeat="phrase in userSavedPhrases | filter: {keyWords: searchText.search}">
+      <div class="row">
+        <div class="panel-body">
+          <div>Subject:  {{phrase.subject}}</div>
+          <div>Measurement:  {{phrase.measure}}</div>
+          <div>Suggested Phrase:  <span>"{{phrase.phrase}}"</span></div>
+          <div>Employee tagged:  <span>"{{phrase.employee}}"</span></div>
+          <button ng-click="removePhraseFromFb()">X</button>
+          <button><a ng-href="#phrase/{{phrase.phraseid}}/edit">Edit this phrase</button>
+        </div>
+      </div>
+    </div>
+  </div>

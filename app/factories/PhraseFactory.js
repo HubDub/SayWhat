@@ -1,6 +1,7 @@
 "use strict";
 
 app.factory("PhraseFactory", function ($q, $http, FirebaseUrl) {
+  console.log("you are in PhraseFactory");
 
   let getSearchPhrase = function(subjectVal) {
     console.log("PhraseFactory.getSearchPhrase");
@@ -40,5 +41,33 @@ app.factory("PhraseFactory", function ($q, $http, FirebaseUrl) {
     });
   };
 
-  return {getSearchPhrase, getOnePhrase, saveExistingPhrase};
+
+  let getUserSavedPhrases = function(userId) {
+    return $q( (resolve, reject) => {
+      console.log("PhraseFactory.getUserSavedPhrases userId: ", userId);
+      $http.get(`${FirebaseUrl}/phrases.json?orderBy="uid"&equalTo="${userId}"`)
+      .success( (FbSavedObjects) => {
+        resolve(FbSavedObjects);
+      })
+      .error( (error) => {
+        reject(error);
+      });
+    });
+  };
+
+  let patchExistingPhrase = function(phraseId, phraseObject) {
+    return $q( (resolve, reject) => {
+      console.log("PhraseFactory.patchExistingPhrase");
+      $http.patch(`${FirebaseUrl}/phrases/${phraseId}.json`, JSON.stringify(phraseObject))
+      .success( (FbSavedObjects) => {
+        resolve(FbSavedObjects);
+    })
+      .error( (error) => {
+        reject(error);
+      });
+    });
+  };
+
+
+  return {getSearchPhrase, getOnePhrase, saveExistingPhrase, getUserSavedPhrases, patchExistingPhrase};
 });
