@@ -1,38 +1,452 @@
 [
-  {
-    "subject" : "attitude",
-    "measure" : "excellent",
-    "phrase" : "always looks for ways to help others",
-    "employee" : []
-  },
-  {
-    "subject" : "attitude",
-    "measure" : "average",
-    "phrase" : "helps others when asked",
-    "employee" : []
-  },
-  {
-    "subject" : "attitude",
-    "measure" : "poor",
-    "phrase" : "avoids assisting coworkers",
-    "employee" : []
-  },
-  {
-    "subject" : "appearance",
-    "measure" : "excellent",
-    "phrase" : "always appears professional",
-    "employee" : []
-  },
-  {
-    "subject" : "appearance",
-    "measure" : "average",
-    "phrase" : "appropriate dress for position",
-    "employee" : []
-  },
-  {
-    "subject" : "appearance",
-    "measure" : "poor",
-    "phrase" : "often appears disheveled",
-    "employee" : []
-  },
+{
+  "subject" : "attitude",
+  "measure" : "excellent",
+  "phrase" : "always looks for ways to help others"
+},
+{
+  "subject" : "attitude",
+  "measure" : "excellent",
+  "phrase" : "always upbeat and optimistic"
+},
+{
+  "subject" : "attitude",
+  "measure" : "excellent",
+  "phrase" : "consistently enthusiastic and energetic"
+},
+{
+  "subject" : "attitude",
+  "measure" : "acceptable",
+  "phrase" : "helps others when asked"
+},
+{
+  "subject" : "attitude",
+  "measure" : "acceptable",
+  "phrase" : "polite and civil to coworkers"
+},
+{
+  "subject" : "attitude",
+  "measure" : "acceptable",
+  "phrase" : "cooperative"
+},
+{
+  "subject" : "attitude",
+  "measure" : "poor",
+  "phrase" : "avoids assisting coworkers"
+},
+{
+  "subject" : "attitude",
+  "measure" : "poor",
+  "phrase" : "negatively affects coworkers due to lack of courtesy"
+},
+{
+  "subject" : "attitude",
+  "measure" : "poor",
+  "phrase" : "coworkers indicate they do not enjoy working with individual"
+},
+{
+  "subject" : "appearance",
+  "measure" : "excellent",
+  "phrase" : "always appears professional"
+}
+{
+  "subject" : "appearance",
+  "measure" : "excellent",
+  "phrase" : "attire immediately conveys positive impression"
+}
+{
+  "subject" : "appearance",
+  "measure" : "excellent",
+  "phrase" : "successfully matches attire to situation and business expectations"
+}
+{
+  "subject" : "appearance",
+  "measure" : "acceptable",
+  "phrase" : "appropriate dress for position"
+}
+{
+  "subject" : "appearance",
+  "measure" : "acceptable",
+  "phrase" : "clothes are clean and pressed"
+}
+{
+  "subject" : "appearance",
+  "measure" : "acceptable",
+  "phrase" : "generally professional appearance"
+}
+{
+  "subject" : "appearance",
+  "measure" : "poor",
+  "phrase" : "often appears disheveled"
+}
+{
+  "subject" : "appearance",
+  "measure" : "poor",
+  "phrase" : "idiosyncratic sense of style puts off some customers"
+}
+{
+  "subject" : "appearance",
+  "measure" : "poor",
+  "phrase" : "coworkers have asked to be seated away from him/her"
+}
+{
+  "subject" : "quality of work",
+  "measure" : "excellent",
+  "phrase" : "work is consistently error-free"
+}
+{
+  "subject" : "quality of work",
+  "measure" : "excellent",
+  "phrase" : "customers regularly compliment work"
+}
+{
+  "subject" : "quality of work",
+  "measure" : "excellent",
+  "phrase" : "quality output makes it easy for others to do their duties"
+}
+{
+  "subject" : "quality of work",
+  "measure" : "acceptable",
+  "phrase" : "quality meets expectations"
+}
+{
+  "subject" : "quality of work",
+  "measure" : "acceptable",
+  "phrase" : "makes use of quality improvement techniques"
+}
+{
+  "subject" : "quality of work",
+  "measure" : "acceptable",
+  "phrase" : "consistently minimizes errors"
+}
+{
+  "subject" : "quality of work",
+  "measure" : "poor",
+  "phrase" : "customers complain about errors"
+}
+{
+  "subject" : "quality of work",
+  "measure" : "poor",
+  "phrase" : "mistakes cause occasional work stoppages"
+}
+{
+  "subject" : "quality of work",
+  "measure" : "poor",
+  "phrase" : "does not make efforts to improve quality of output"
+}
+{
+  "subject" : "written communication",
+  "measure" : "excellent",
+  "phrase" : "exceptional communicator"
+}
+{
+  "subject" : "written communication",
+  "measure" : "excellent",
+  "phrase" : "regularly receives positive feedback on clarity of writing"
+}
+{
+  "subject" : "written communication",
+  "measure" : "excellent",
+  "phrase" : "can clearly convey complex subjects in easy to understand sentences"
+}
+{
+  "subject" : "written communication",
+  "measure" : "acceptable",
+  "phrase" : "can generally expresses themselves clearly in written communication"
+}
+{
+  "subject" : "written communication",
+  "measure" : "acceptable",
+  "phrase" : "spelling usually correct"
+}
+{
+  "subject" : "written communication",
+  "measure" : "acceptable",
+  "phrase" : "documentation is consistently understandable"
+}
+{
+  "subject" : "written communication",
+  "measure" : "poor",
+  "phrase" : "writing fails to meet company standards"
+}
+{
+  "subject" : "written communication",
+  "measure" : "poor",
+  "phrase" : "writing has not improved in spite of feedback"
+}
+{
+  "subject" : "written communication",
+  "measure" : "poor",
+  "phrase" : "numerous errors and lack of clarity make understanding difficult"
+}
+{
+  "subject" : "verbal communication",
+  "measure" : "excellent",
+  "phrase" : "speaks persuasively and convincingly"
+}
+{
+  "subject" : "verbal communication",
+  "measure" : "excellent",
+  "phrase" : "develops clear, concise presentations"
+}
+{
+  "subject" : "verbal communication",
+  "measure" : "excellent",
+  "phrase" : "solves customer problems faster than average due to ability to give clear explanations"
+}
+{
+  "subject" : "verbal communication",
+  "measure" : "acceptable",
+  "phrase" : "can explain complex scenerious"
+}
+{
+  "subject" : "verbal communication",
+  "measure" : "acceptable",
+  "phrase" : "seems comfortable while presenting"
+}
+{
+  "subject" : "verbal communication",
+  "measure" : "acceptable",
+  "phrase" : "clear and understandable speaker"
+}
+{
+  "subject" : "verbal communication",
+  "measure" : "poor",
+  "phrase" : "does not build rapport with audience"
+}
+{
+  "subject" : "verbal communication",
+  "measure" : "poor",
+  "phrase" : "poor enunciation and tone causes listeners to be frustrated and confused"
+}
+{
+  "subject" : "verbal communication",
+  "measure" : "poor",
+  "phrase" : "uses unacceptable language or jokes when speaking"
+}
+{
+  "subject" : "flexibility",
+  "measure" : "excellent",
+  "phrase" : "always makes self available, even at the last minute"
+}
+{
+  "subject" : "flexibility",
+  "measure" : "excellent",
+  "phrase" : "able to shift focus rapidly and succeeed at assumed task"
+}
+{
+  "subject" : "flexibility",
+  "measure" : "excellent",
+  "phrase" : "always adapts well to shifting priorites"
+}
+{
+  "subject" : "flexibility",
+  "measure" : "acceptable",
+  "phrase" : "adjusts to changes in procedure fairly well"
+}
+{
+  "subject" : "flexibility",
+  "measure" : "acceptable",
+  "phrase" : "able to often change schedule to meet production deadlines"
+}
+{
+  "subject" : "flexibility",
+  "measure" : "acceptable",
+  "phrase" : "gracefully accepts changes to work"
+}
+{
+  "subject" : "flexibility",
+  "measure" : "poor",
+  "phrase" : "resists changes"
+}
+{
+  "subject" : "flexibility",
+  "measure" : "poor",
+  "phrase" : "lacks flexibility in most situations"
+}
+{
+  "subject" : "flexibility",
+  "measure" : "poor",
+  "phrase" : "becomes agitated when asked to work outside the daily routine"
+}
+{
+  "subject" : "initiative",
+  "measure" : "excellent",
+  "phrase" : "always seeks way to improve work flow or work environment"
+}
+{
+  "subject" : "initiative",
+  "measure" : "excellent",
+  "phrase" : "manager has never needed to ask employee to act proactively"
+}
+{
+  "subject" : "initiative",
+  "measure" : "excellent",
+  "phrase" : "often displays foresight in heading off problems before they occur"
+}
+{
+  "subject" : "initiative",
+  "measure" : "acceptable",
+  "phrase" : "takes initiative when appropriate"
+}
+{
+  "subject" : "initiative",
+  "measure" : "acceptable",
+  "phrase" : "likes limits specifically spelled out but goes to them willingly"
+}
+{
+  "subject" : "initiative",
+  "measure" : "acceptable",
+  "phrase" : "will take appropriate action without seeking permission when that is necessary"
+}
+{
+  "subject" : "initiative",
+  "measure" : "poor",
+  "phrase" : "shows initiative at a level below what the job requires"
+}
+{
+  "subject" : "initiative",
+  "measure" : "poor",
+  "phrase" : "does not take independent action"
+}
+{
+  "subject" : "initiative",
+  "measure" : "poor",
+  "phrase" : "uses unacceptable language or jokes when speaking"
+},
+{
+  "subject" : "safety",
+  "measure" : "excellent",
+  "phrase" : "always encourages safe practices"
+}
+{
+  "subject" : "safety",
+  "measure" : "excellent",
+  "phrase" : "always adheres to safety rules and practices"
+}
+{
+  "subject" : "safety",
+  "measure" : "excellent",
+  "phrase" : "wears appropriate safety gear on shop floor at all times"
+}
+{
+  "subject" : "safety",
+  "measure" : "acceptable",
+  "phrase" : "is generally conscious of safety and adheres to regulations"
+}
+{
+  "subject" : "safety",
+  "measure" : "acceptable",
+  "phrase" : "mostly works within safety guidelines"
+}
+{
+  "subject" : "safety",
+  "measure" : "acceptable",
+  "phrase" : "has had no major safety infractions"
+}
+{
+  "subject" : "safety",
+  "measure" : "poor",
+  "phrase" : "often flaunts safety regulations"
+}
+{
+  "subject" : "safety",
+  "measure" : "poor",
+  "phrase" : "refuses to wear helmet in parts of the shop that call for it"
+}
+{
+  "subject" : "safety",
+  "measure" : "poor",
+  "phrase" : "has had more than one safety infraction in the last year"
+}
+{
+  "subject" : "knowledge",
+  "measure" : "excellent",
+  "phrase" : "clearly understands all knowledge pertaining to her/his job duties"
+}
+{
+  "subject" : "knowledge",
+  "measure" : "excellent",
+  "phrase" : "is a consistent and reliable source of information for other employees"
+}
+{
+  "subject" : "knowledge",
+  "measure" : "excellent",
+  "phrase" : "always takes opportunities to expand knowledge base"
+}
+{
+  "subject" : "knowledge",
+  "measure" : "acceptable",
+  "phrase" : "understands systems necessary to complete job duties"
+}
+{
+  "subject" : "knowledge",
+  "measure" : "acceptable",
+  "phrase" : "attends seminars to reinforce knowledge when asked"
+}
+{
+  "subject" : "knowledge",
+  "measure" : "acceptable",
+  "phrase" : "reads as necessary to keep abreast of position information"
+}
+{
+  "subject" : "knowledge",
+  "measure" : "poor",
+  "phrase" : "does not consistently read industry resources to maintain minimum knowledge base"
+}
+{
+  "subject" : "knowledge",
+  "measure" : "poor",
+  "phrase" : "does not indicate possession of knowledge necessary to perform job duties"
+}
+{
+  "subject" : "knowledge",
+  "measure" : "poor",
+  "phrase" : "often runs into situations where he/she does not know what to do due to lack of knowledge"
+}
+{
+  "subject" : "customer relations",
+  "measure" : "excellent",
+  "phrase" : "has developed an incredibly loyal customer base"
+}
+{
+  "subject" : "customer relations",
+  "measure" : "excellent",
+  "phrase" : "customers often ask for him/her by name"
+}
+{
+  "subject" : "customer relations",
+  "measure" : "excellent",
+  "phrase" : "always makes customers feel special"
+}
+{
+  "subject" : "customer relations",
+  "measure" : "acceptable",
+  "phrase" : "usually competent and professional with customers"
+}
+{
+  "subject" : "customer relations",
+  "measure" : "acceptable",
+  "phrase" : "generally able to communicate necessary information to customer"
+}
+{
+  "subject" : "customer relations",
+  "measure" : "acceptable",
+  "phrase" : "has a professional presentation"
+}
+{
+  "subject" : "customer relations",
+  "measure" : "poor",
+  "phrase" : "shows annoyance or impatience with customers"
+}
+{
+  "subject" : "customer relations",
+  "measure" : "poor",
+  "phrase" : "often leaves customers confused or asking clarification questions from other staff"
+}
+{
+  "subject" : "customer relations",
+  "measure" : "poor",
+  "phrase" : "presents a sloppy and uncaring image"
+}
 ]
