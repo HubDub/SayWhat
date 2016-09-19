@@ -7,10 +7,10 @@ app.controller("UserPhrasesCtrl", function(PhraseFactory, $scope, $location, Sea
   let userId = $scope.$parent.getUser();
   // console.log("UserPhraseCtrl userId: ", userId);
 
-  let userSavedPhrases = [];
 
   PhraseFactory.getUserSavedPhrases(userId)
     .then((savedUserObjects) => {
+      let userSavedPhrases = [];
       // console.log("UserPhraseCtrl after getUserSavedPhrases: objs: ", savedUserObjects);
       for (var phrase in savedUserObjects) {
         // console.log("phrase id: ", phrase)
@@ -23,11 +23,21 @@ app.controller("UserPhrasesCtrl", function(PhraseFactory, $scope, $location, Sea
     });
 
   $scope.removeUserPhraseFb = function(phraseId) {
-    console.log("UserPhraseCtrl.removeUserPhraseFb-phraseId: ", phraseId);
+    // console.log("UserPhraseCtrl.removeUserPhraseFb-phraseId: ", phraseId);
     PhraseFactory.deleteUserPhrase(phraseId)
       .then( (response) => {
-        console.log("removeUserPhraseFb after deleteUserPhrase - phrase should be deleted from FB");
-        $location.url("/savedPhrases");
+        PhraseFactory.getUserSavedPhrases(userId)
+          .then((savedUserObjects) => {
+            // console.log("removeUserPhraseFb after get list again", savedUserObjects);
+            let userSavedPhrases = [];
+            // console.log("after delete userSavedPhrases should be empty: ", userSavedPhrases);
+            for (var phrase in savedUserObjects) {
+              savedUserObjects[phrase].phraseid = phrase;
+              userSavedPhrases.push(savedUserObjects[phrase]);
+            }
+            // console.log("after delete, after getUserSavedPhrases, should be array of objects w/out deleted phrase: ", userSavedPhrases);
+            $scope.userSavedPhrases = userSavedPhrases;
+          });
       });
   };
 });

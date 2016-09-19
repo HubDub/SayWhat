@@ -20,7 +20,7 @@ app.controller("SavePhraseCtrl", function ($scope, PhraseFactory, $routeParams, 
     $scope.thePhrase.uid = userId;
     PhraseFactory.saveExistingPhrase($scope.thePhrase)
       .then( (response) => {
-        $location.url("/landing");
+        $location.url("/savedPhrases");
       });
   };
 
