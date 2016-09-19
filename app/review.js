@@ -36,28 +36,48 @@ app.config(function($routeProvider) {
     }).
     when("/phrase/:phraseId/save", {
       templateUrl: "partials/phraseForm.html",
-      controller: "SavePhraseCtrl"
+      controller: "SavePhraseCtrl",
+      resolve: {isAuth},
+      loginRequired: true
     }).
     when("/savedPhrases", {
       templateUrl: "partials/userPhrases.html",
-      controller: "UserPhrasesCtrl"
+      controller: "UserPhrasesCtrl",
+      resolve: {isAuth}
     }).
     when("/phrase/:phraseId/edit", {
       templateUrl: "partials/phraseForm.html",
-      controller: "EditPhraseCtrl"
+      controller: "EditPhraseCtrl",
+      resolve: {isAuth}
     }).
     when("/phrase/new", {
       templateUrl: "partials/phraseForm.html",
-      controller: "CreatePhraseCtrl"
+      controller: "CreatePhraseCtrl",
+      resolve: {isAuth}
     }).
     otherwise("/landing");
 });
 
-app.run( ($location, FBCreds) => {
+app.run( ($location, FBCreds, $rootScope, AuthFactory) => {
+  let postLogInRoute;
   let creds = FBCreds;
   let authConfig = {
     apiKey: creds.key,
     authDomain: creds.authDomain
   };
   firebase.initializeApp(authConfig);
+
+  $rootScope.$on('$routeChangeStart', function (event, nextRoute, currentRoute) {
+    //if login required and you're logged out, capture the current path into the postLogInRoute var
+        if (nextRoute.loginRequired && AuthFactory.isAuthenticated() === false) {
+          postLogInRoute = $location.path();
+          console.log("trying to capture path: ", postLogInRoute);
+          $location.path('/login').replace();
+        } else if (postLogInRoute && AuthFactory.isAuthenticated()) {
+    //once logged in, redirect to the last route and reset it
+          console.log("after login postroute: ", postLogInRoute);
+          $location.path(postLogInRoute).replace();
+          postLogInRoute = null;
+        }
+    });
 });
