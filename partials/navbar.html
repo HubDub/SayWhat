@@ -1,30 +1,32 @@
 <div class="navbar" ng-controller="NavBarCtrl">
   <div class="container">
-    <!-- ::before what does this mean? -->
-    <a class="navbar-brand" href="/">
-      <img src="http://thumb101.shutterstock.com/display_pic_with_logo/1946846/185726267/stock-vector-vector-stick-man-group-of-stick-figures-surrounding-and-presenting-letters-reading-team-185726267.jpg" width="48">
-      <div>Say What? (professionally speaking)</div>
-    </a>
-    <ul class="nav navbar-nav">
-      <li>
-        <a href="/#/about" class="nav-about">Home</a>
-      </li>
-      <li>
-        <a href="/#/search">Search for Phrases</a>
-      </li>
-      <li ng-show="$parent.isLoggedIn">
-        <a href="/#/savedPhrases">Your Saved Phrases</a>
-      </li>
-      <li ng-show="$parent.isLoggedIn">
-        <a href="/#/phrase/new">Create a New Phrase</a>
-      </li>
-      <li ng-show="!$parent.isLoggedIn">
-        <a href="/#/login">Sign In</a>
-      </li>
-      <li ng-show="$parent.isLoggedIn">
-        <a ng-click="logout()">Sign Out</a>
-      </li>
-
-    </ul>
+    <div class="navbar-header">
+      <nav class="clearfix">
+        <ul class="clearfix">
+          <li class="navbar-brand">
+            <img src="http://thumb101.shutterstock.com/display_pic_with_logo/1946846/185726267/stock-vector-vector-stick-man-group-of-stick-figures-surrounding-and-presenting-letters-reading-team-185726267.jpg" width="48">
+            <div>Say What?</div>
+          </li>
+          <li>
+            <a href="/#/about" class="nav-about">Home</a>
+          </li>
+          <li>
+            <a href="/#/search">Search for Phrases</a>
+          </li>
+          <li ng-show="$parent.isLoggedIn">
+            <a href="/#/savedPhrases">Your Saved Phrases</a>
+          </li>
+          <li ng-show="$parent.isLoggedIn">
+            <a href="/#/phrase/new">Create a New Phrase</a>
+          </li>
+          <li ng-show="!$parent.isLoggedIn">
+            <a href="/#/login">Sign In</a>
+          </li>
+          <li ng-show="$parent.isLoggedIn">
+            <a ng-click="logout()">Sign Out</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </div>
 </div>

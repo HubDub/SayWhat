@@ -1,4 +1,4 @@
-<h2>Search for a phrase</h2>
+<h1>Search for a phrase</h1>
   <form>
     <div class="form-group">
       <label>What Subject? (*required)</label>
@@ -43,12 +43,11 @@
         <div class="panel-body ">
           <div>Subject:  {{phrase.subject}}</div>
           <div>Measurement:  {{phrase.measure}}</div>
-          <p>Suggested Phrase:  <span>"{{phrase.phrase}}"</span></p>
-          <button ng-click="removePhraseFromList($index)">X</button>
-
-          <!-- <button ng-click="getPhraseId(phrase.phraseid)">Save This Phrase</button> -->
-
-          <button><a ng-href="#phrase/{{phrase.phraseid}}/save">Save this phrase</button>
+          <p>Suggested Phrase:    <span>"{{phrase.phrase}}"</span></p>
+          <div class="search-btn-div">
+            <button class="btn btn-danger btn-delete-search" ng-click="removePhraseFromList($index)">X</button>
+            <button class="btn btn-success btn-save"><a ng-href="#phrase/{{phrase.phraseid}}/save">Save this phrase</a></button>
+          </div>
         </div>
 
       </div>
