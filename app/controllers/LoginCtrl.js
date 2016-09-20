@@ -1,7 +1,6 @@
 "use strict";
 
 app.controller("LoginCtrl", function($scope, $window, AuthFactory ) {
-  // focus("#loginInputField");
   $scope.account = {
     email: "",
     password: ""
@@ -27,7 +26,7 @@ app.controller("LoginCtrl", function($scope, $window, AuthFactory ) {
       .then( (data) => {
         console.log("logged in user: ", data.uid);
         if (data) {
-        $window.location.href = "#/landing";
+        $window.location.href = "#/savedPhrases";
         } else {
           $window.location.href = "#/login";
         }
@@ -36,5 +35,4 @@ app.controller("LoginCtrl", function($scope, $window, AuthFactory ) {
       console.log("Error logging in", error);
       });
     };
-//we cannot access the window object from inside these controllers, so we must pass it in
 });
