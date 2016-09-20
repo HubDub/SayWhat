@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller("SearchNewCtrl", function($scope, PhraseFactory, $location) {
+app.controller("SearchNewCtrl", function($scope, PhraseFactory, $location, ngToast) {
 
   $scope.searchExisting = function() {
     let searchedPhrases = [];
@@ -10,8 +10,12 @@ app.controller("SearchNewCtrl", function($scope, PhraseFactory, $location) {
     // console.log("SearchNewCtrl.searchExisting measureval: ", measureVal);
 
     if (subjectVal === undefined) {
-        alert("you must choose a subject");
-        //this doesn't work. need to add some type of stop that will force them to choose a subject, unless we want them to pull the whole database?
+        // if they leave the subject blank this will pop up
+        ngToast.create({
+          className: "warning",
+          // horizontalPosition: "left",
+          content: "Please pick a subject!"
+        });
     } else
     PhraseFactory.getSearchPhrase(subjectVal)
       .then((phraseObjects) => {
@@ -40,9 +44,4 @@ app.controller("SearchNewCtrl", function($scope, PhraseFactory, $location) {
     $scope.searchedPhrases.splice(index, 1);
     // console.log(searchedPhrases);
   };
-
-  // $scope.getPhraseId = function(phraseId) {
-  //   console.log("SearchNewCtrl.getPhraseId: ", phraseId);
-  //   $location.url("/phrase/:phraseid/save");
-  // }
 });

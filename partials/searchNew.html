@@ -1,4 +1,4 @@
-<h2>Search for a phrase</h2>
+<h1>Search for a phrase</h1>
   <form>
     <div class="form-group">
       <label>What Subject? (*required)</label>
@@ -14,41 +14,30 @@
           <option value="verbal communication">Verbal Communication</option>
           <option value="written communication">Written Communication</option>
         </select>
-      <label>What Subject? (not required)</label>
+      <label>What Measure? (not required)</label>
         <select id="measure" ng-model="measure">
           <option value="all">All</option>
           <option value="excellent">Excellent</option>
           <option value="acceptable">Acceptable</option>
           <option value="poor">Poor</option>
         </select>
-
-      <!-- the below might make it prettier but for now I just want it to work -->
-      <!-- <div class="input-group-btn  board-list">
-        <button class="btn btn-success dropdown-toggle" data-toggle="dropdown" style="margin-top: 10px;">Choose Your Subject</button>
-        <ul class="subject dropdown-menu dropdown-menu-right">
-          <li value="attitude">Attitude</li>
-          <li value="appearance">Appearance</li>
-        </ul>
-      </div> -->
-
-
     <button class="btn btn-default" ng-click="searchExisting()">Search</button>
   </form>
   <br>
+  <toast></toast>
   <br>
   <br>
-  <div class="row">
+  <div class="row search-result">
     <div class ="search-phrases panel panel-success col-md-3 col-md-offset-1 .containerfluid" ng-repeat="phrase in searchedPhrases | filter: {keyWords: searchText.search}">
       <div class="row">
         <div class="panel-body ">
-          <div>Subject:  {{phrase.subject}}</div>
-          <div>Measurement:  {{phrase.measure}}</div>
-          <p>Suggested Phrase:  <span>"{{phrase.phrase}}"</span></p>
-          <button ng-click="removePhraseFromList($index)">X</button>
-
-          <!-- <button ng-click="getPhraseId(phrase.phraseid)">Save This Phrase</button> -->
-
-          <button><a ng-href="#phrase/{{phrase.phraseid}}/save">Save this phrase</button>
+          <div class="phrase-line">Subject:  {{phrase.subject}}</div>
+          <div class="phrase-line">Measurement:  {{phrase.measure}}</div>
+          <p>Suggested Phrase:    <span>"{{phrase.phrase}}"</span></p>
+          <div class="search-btn-div">
+            <button class="btn btn-danger btn-delete-search" ng-click="removePhraseFromList($index)">X</button>
+            <button class="btn btn-success btn-save"><a ng-href="#phrase/{{phrase.phraseid}}/save">Save this phrase</a></button>
+          </div>
         </div>
 
       </div>

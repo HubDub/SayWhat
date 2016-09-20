@@ -1,33 +1,168 @@
-h1, h2 {
-  text-align: center;
-  color: blue;
+/* Basic Styles */
+body {
+  /*background-image: url(http://voxaudioonline.com/wp-content/uploads/2012/06/website-background1.jpg);*/
+  background-image: url(http://blog.hostbaby.com/wp-content/uploads/2014/03/PaintSwatches_1400x900.jpg);
+  /*background-color: #ece8e5;*/
 }
-
-.navbar {
-  background-color: skyblue;
+/*NAVBAR*/
+/* Clearfix */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
 }
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
+}
+/*}*/
+nav {
+  height: 110px;
+  width: 100%;
+  /*background: #455868;*/
+  font-size: 11pt;
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-weight: bold;
+  position: relative;
+  /*border-bottom: 2px solid #283744;*/
+}
+/*.navbar-header {
+  text-align: center
+}*/
 
-h3 {
+nav ul {
   text-align: center;
+  padding: 0;
+  /*margin: 0 auto;*/
+  /*width: 1500px;*/
+  height: 100px;
+}
+nav li {
+  display: inline;
+  /*float: left;*/
+}
+nav a {
+  color: #fff;
+  display: inline-block;
+  width: 150px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 110px;
   font-weight: 600;
+  text-shadow: 1px 1px 0px #283744;
+}
+nav li a {
+  border-right: 1px solid #576979;
+  box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+}
+nav li:last-child a {
+  border-right: 0;
+}
+nav a:hover, nav a:active {
+  background-color: #8c99a4;
+}
+nav a#pull {
+  display: none;
 }
 
+.logo {
+  margin: 0 auto;
+  color: aliceblue;
+}
+
+/*heading on landing/home page*/
+h3 {
+  font-family: 'PT Sans', Arial, sans-serif;
+  text-align: center;
+  font-weight: 800;
+  color: #455868;
+}
+
+/*.landingPage {
+  background-image: url(http://cartoon.ngmnexpo.com/cliparts/2014/12/17937.jpg);
+  background-size: 80px 60px;
+  background-repeat: no-repeat;
+}*/
+
+/*quotes on landing/home page*/
 .landQuote1, .landQuote2 {
-  font-weight: 700;
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-weight: 900;
   font-style: italic;
 }
 
+.landing-p {
+  text-align: justify;
+}
+
+/*on langing page to create space between text*/
+.top-buffer {
+  margin-top: 40px;
+}
+
+
+/*headings on userphrases, search, edit*/
+h1 {
+  font-family: 'PT Sans', Arial, sans-serif;
+  color: #455868;
+  text-align: center;
+}
+
+/*user phrase cards*/
 .user-phrases {
   min-height: 80px;
-  background-color: lightblue;
+  background-color: white;
+  border: 1px solid black;
+}
+
+/*user phrases center buttons in div*/
+div.col-md-3 {
+  text-align: center;
+}
+
+/*user phrases buttons*/
+.btn-delete-phrase, .btn-edit {
+  box-shadow: 0 3px 0 0 darkgray;
+}
+
+/*searched phrases cards*/
+form {
+  text-align: center;
 }
 
 .search-phrases {
   min-height: 200px;
-  background-color: lightsalmon;
+  background-color: white;
+  border: 1px solid black;
 }
 
+/*searched phrases - makes phrase italic and bold*/
 .search-phrases p span {
   font-style: italic;
   font-weight: 800;
+}
+
+/*searched phrases - buttons*/
+.search-btn-div {
+  position:absolute;
+  left: 20%;
+  bottom:1px;
+  margin-bottom:7px;
+
+}
+.btn-delete-search {
+  border-radius: 24px;
+  box-shadow: 0 3px 0 0 darkgray;
+}
+
+.btn-save {
+  box-shadow: 0 3px 0 0 darkgray;
+}
+
+.phrase-line {
+  padding-bottom: 2px;
 }
