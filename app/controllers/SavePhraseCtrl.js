@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller("SavePhraseCtrl", function ($scope, PhraseFactory, $routeParams, $location) {
+app.controller("SavePhraseCtrl", function ($scope, PhraseFactory, $routeParams, $location, ngToast) {
   console.log("You are in SavePhraseCtrl");
   $scope.title = "Save Phrase in Your Saved Phrases";
   $scope.btnText = "Save";
@@ -14,6 +14,10 @@ app.controller("SavePhraseCtrl", function ($scope, PhraseFactory, $routeParams, 
     });
 
   $scope.saveOnePhrase = function() {
+    ngToast.create({
+          className: "info",
+          content: "You have saved this phrase!"
+        });
     // console.log("SavePhraseCtrl.saveOnePhrase, phrase: ", $scope.thePhrase);
     let userId = $scope.$parent.getUser();
     // console.log("SavePhraseCtrl.saveOnePhrase: userId: ", userId);

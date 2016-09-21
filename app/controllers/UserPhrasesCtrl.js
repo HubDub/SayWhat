@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller("UserPhrasesCtrl", function(PhraseFactory, $scope, $location, SearchTermData) {
+app.controller("UserPhrasesCtrl", function(PhraseFactory, $scope, $location, SearchTermData, ngToast) {
   console.log("you are in the UserPhrasesCtrl");
   $scope.searchText = SearchTermData;
   //need to grab userId.
@@ -23,6 +23,11 @@ app.controller("UserPhrasesCtrl", function(PhraseFactory, $scope, $location, Sea
     });
 
   $scope.removeUserPhraseFb = function(phraseId) {
+    ngToast.create({
+          className: "success",
+          // horizontalPosition: "left",
+          content: "You have deleted this phrase from your saved phrases!"
+        });
     // console.log("UserPhraseCtrl.removeUserPhraseFb-phraseId: ", phraseId);
     PhraseFactory.deleteUserPhrase(phraseId)
       .then( (response) => {

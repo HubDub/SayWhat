@@ -12,7 +12,7 @@ app.controller("SearchNewCtrl", function($scope, PhraseFactory, $location, ngToa
     if (subjectVal === undefined) {
         // if they leave the subject blank this will pop up
         ngToast.create({
-          className: "warning",
+          className: "danger",
           // horizontalPosition: "left",
           content: "Please pick a subject!"
         });

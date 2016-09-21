@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller("CreatePhraseCtrl", function($scope, $location, PhraseFactory) {
+app.controller("CreatePhraseCtrl", function($scope, $location, PhraseFactory, ngToast) {
   console.log("You are in CreatePhraseCtrl");
   $scope.title = "Create Your Phrase";
   $scope.btnText = "Save New Phrase";
@@ -14,6 +14,10 @@ app.controller("CreatePhraseCtrl", function($scope, $location, PhraseFactory) {
   };
 
   $scope.saveOnePhrase = function() {
+    ngToast.create({
+          className: "info",
+          content: "You have saved this phrase!"
+        });
     console.log("CreatePhraseCtrl.addNewUserPhrase");
     PhraseFactory.postNewUserPhrase($scope.thePhrase)
       .then ( (result) => {
