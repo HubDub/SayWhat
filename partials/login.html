@@ -1,12 +1,10 @@
 <section class="auth-form">
-  <h1>Login or Register</h1>
-  <div>
-    Email: <input id="loginInputField" type="text" autofocus="true" ng-model="account.email">
-  </div>
-  <div>
-    Password: <input type="password" ng-model="account.password">
-  </div>
-  <div>
+  <h1>Login or Register as a New User</h1>
+  <div class="login-padding">Email: </div>
+  <div><input id="loginInputField" type="text" autofocus="true" ng-model="account.email"></div>
+  <div class="login-padding">Password: </div>
+  <div><input type="password" ng-model="account.password"></div>
+  <div class="login-padding">
     <button class="btn btn-info" ng-click="login()">Login</button>
     <span>  OR  </span>
     <button class="btn btn-info" ng-click="register()">Register</button>

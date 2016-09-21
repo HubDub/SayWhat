@@ -172,3 +172,12 @@ form {
 .suggestionP {
   font-style: italic;
 }
+
+/*log in page*/
+.auth-form {
+  text-align: center;
+}
+
+.login-padding {
+  margin-top : 10px;
+}
