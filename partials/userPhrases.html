@@ -14,10 +14,11 @@
             <div>Employee tagged:  <span>"{{phrase.employee}}"</span></div>
           </div>
           <div class="col-md-3">
-            <button class="btn btn-danger btn-delete-phrase" ng-click="removeUserPhraseFb(phrase.phraseid)">Delete Phrase</button>
-            <br>
-            <br>
             <button class="btn btn-success btn-edit"><a ng-href="#phrase/{{phrase.phraseid}}/edit">Edit phrase</a></button>
+            <button class="btn btn-danger btn-delete-phrase" ng-click="removeUserPhraseFb(phrase.phraseid)">Delete Phrase</button>
+
+
+            <button ng-if="phrase.measure === 'poor'" class="btn btn-info btn-edit" data-toggle="modal" data-target="#myModal" ng-click="suggestions(phrase.subject)">Conversation Recommendation</button>
           </div>
         </div>
       </div>
@@ -25,3 +26,25 @@
   </div>
   <toast></toast>
   <!-- the toast is to make ngToast work -->
+<!-- Suggested Conversation modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Creating a dialogue about how an employee can improve performance is key to employee success and growth. Here are some conversational suggestions:</h4>
+      </div>
+      <div class="modal-body">
+        <p>Ask a question on how they think the subject is affecting their performance:</p>
+        <p class="suggestionP">    {{subjectSuggestion.question}}</p>
+        <p>Then make clear suggestions on how they can improve performance:</p>
+        <p class="suggestionP">    {{subjectSuggestion.convo}}</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>

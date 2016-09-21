@@ -92,6 +92,19 @@ app.factory("PhraseFactory", function ($q, $http, FirebaseUrl) {
       });
     });
   };
+// gets suggestions for the suggested conversation modal
+  let getSuggestion = function(subject) {
+    return $q( (resolve, reject) => {
+      $http.get(`${FirebaseUrl}/suggestions.json?orderBy="subject"&equalTo="${subject}"`)
+      .success( (suggestion) => {
 
-  return {getSearchPhrase, getOnePhrase, saveExistingPhrase, getUserSavedPhrases, patchExistingPhrase, deleteUserPhrase, postNewUserPhrase};
+        resolve(suggestion);
+      })
+      .error( (error) => {
+        reject(error);
+      });
+    });
+  };
+
+  return {getSearchPhrase, getOnePhrase, saveExistingPhrase, getUserSavedPhrases, patchExistingPhrase, deleteUserPhrase, postNewUserPhrase, getSuggestion};
 });

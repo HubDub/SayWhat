@@ -101,7 +101,7 @@ h3 {
 
 /*on langing page to create space between text*/
 .top-buffer {
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 
@@ -127,6 +127,7 @@ div.col-md-3 {
 /*user phrases buttons*/
 .btn-delete-phrase, .btn-edit {
   box-shadow: 0 3px 0 0 darkgray;
+  margin-bottom: 4px;
 }
 
 /*searched phrases cards*/
@@ -165,4 +166,9 @@ form {
 
 .phrase-line {
   padding-bottom: 2px;
+}
+
+/*modal styling*/
+.suggestionP {
+  font-style: italic;
 }
