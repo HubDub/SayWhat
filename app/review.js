@@ -60,11 +60,11 @@ app.config(function($routeProvider) {
 
 //this is the config for the ngToast provider to configure the toasts that I use later
 app.config(['ngToastProvider', function(ngToast) {
-    ngToast.configure({
-      verticalPosition: 'top',
-      horizontalPosition: 'center'
-    });
-  }]);
+  ngToast.configure({
+    verticalPosition: 'top',
+    horizontalPosition: 'center'
+  });
+}]);
 
 app.run( ($location, FBCreds, $rootScope, AuthFactory) => {
   let postLogInRoute;
@@ -73,7 +73,7 @@ app.run( ($location, FBCreds, $rootScope, AuthFactory) => {
     apiKey: creds.key,
     authDomain: creds.authDomain
   };
-  firebase.initializeApp(authConfig);
+firebase.initializeApp(authConfig);
 
 //this function allows me to capture their route if they are not logged in and then when they do log in send them back on that route.
   $rootScope.$on('$routeChangeStart', function (event, nextRoute, currentRoute) {

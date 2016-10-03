@@ -25,9 +25,8 @@ app.controller("UserPhrasesCtrl", function(PhraseFactory, $scope, $location, Sea
   $scope.removeUserPhraseFb = function(phraseId) {
     ngToast.create({
           className: "success",
-          // horizontalPosition: "left",
           content: "You have deleted this phrase from your saved phrases!"
-        });
+    });
     // console.log("UserPhraseCtrl.removeUserPhraseFb-phraseId: ", phraseId);
     PhraseFactory.deleteUserPhrase(phraseId)
       .then( (response) => {
